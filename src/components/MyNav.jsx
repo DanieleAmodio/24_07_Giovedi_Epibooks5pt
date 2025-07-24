@@ -19,7 +19,7 @@ function MyNav({
     <>
       <Navbar bg={theme} data-bs-theme={theme}>
         <Button size="sm"style={{ backgroundColor: 'transparent', color: colorText }} onClick={toggleTheme}>Theme</Button>
-        <Container >
+        <Container className="d-sm-flex flex-sm-wrap">
           <Navbar.Brand style={{ color: colorText}} href="#home">EpiBOOKS</Navbar.Brand>
           <Nav  className="me-auto">
             <Nav.Link style={{ color: colorText}}  href="#">Home</Nav.Link>
