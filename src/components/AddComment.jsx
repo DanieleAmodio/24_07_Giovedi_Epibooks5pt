@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Button, Form , Spinner} from 'react-bootstrap';
 
-function AddComment ({asin,onNewComment}) {
+function AddComment ({asin,onNewComment , colorText}) {
     const [comment,setComment]=useState('');
     const [rate,setRate]=useState(1);
     const [Loading,setLoading]=useState(false);
@@ -43,10 +43,10 @@ function AddComment ({asin,onNewComment}) {
     }
     return (
         <Form onSubmit={handleComment} className="mb-3">
-      <h6>Aggiungi un commento</h6>
+      <h6 style={{color:colorText}}>Aggiungi un commento</h6>
 
       <Form.Group className="mb-2" controlId="commentText">
-        <Form.Label>Commento</Form.Label>
+        <Form.Label style={{color:colorText}}>Commento</Form.Label>
         <Form.Control
           as="textarea"
           rows={2}
@@ -58,7 +58,7 @@ function AddComment ({asin,onNewComment}) {
       </Form.Group>
 
       <Form.Group className="mb-2" controlId="rateSelect">
-        <Form.Label>Valutazione</Form.Label>
+        <Form.Label style={{color:colorText}}>Valutazione</Form.Label>
         <Form.Select value={rate} onChange={(e) => setRate(e.target.value)} required>
           {[1, 2, 3, 4, 5].map((n) => (
             <option key={n} value={n}>{n}</option>

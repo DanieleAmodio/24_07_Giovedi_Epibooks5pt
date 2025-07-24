@@ -4,7 +4,7 @@ import CommentList from './CommentsList';
 import AddComment from './AddComment';
 const Api_Key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODU5Yjg1MjRlZjFiYzAwMTVkZjVhZDIiLCJpYXQiOjE3NTI4NTg0MDMsImV4cCI6MTc1NDA2ODAwM30.RMtDjGIUuLU4cQgpGrCJit52MvS7pmJgBMGJMrpGOlw"
 
-function CommentArea({asin}) {
+function CommentArea({asin , colorText}) {
     const Api_Url= `https://striveschool-api.herokuapp.com/api/books/${asin}/comments/`;
 const [comment,setComment]=useState([])
 
@@ -29,8 +29,8 @@ const [comment,setComment]=useState([])
 
     return (
         <div className='mt-3'>
-            <AddComment asin={asin} onNewComment={fetchComments}/>
-            <CommentList comments={comment} onEditOrDeleteComment={fetchComments} />
+            <AddComment asin={asin} onNewComment={fetchComments} colorText={colorText}/>
+            <CommentList comments={comment} onEditOrDeleteComment={fetchComments} colorText={colorText} />
         </div>
     )
 

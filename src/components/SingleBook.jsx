@@ -18,13 +18,13 @@ function SingleBook({book, colorText, theme}){
              <Card.Text style={{ color: colorText}} >
              Price: {book.price}
              </Card.Text>
-              {selected && <CommentArea asin={book.asin}/>}
+              {selected && <CommentArea asin={book.asin} colorText={colorText} />}
              </Card.Body>
              </Card>
            </Col>
           
            </>
-    )
+    ) 
   }
     
     

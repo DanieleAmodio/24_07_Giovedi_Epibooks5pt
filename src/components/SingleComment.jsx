@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal, Form, Spinner } from "react-bootstrap";
 import { useState } from "react";
 
-function SingleComment({ comment, onEditOrDeleteComment }) {
+function SingleComment({ comment, onEditOrDeleteComment, colorText}) {
   const [show, setShow] = useState(false);
   const [editedComment, setEditedComment] = useState(comment.comment);
   const [editedRate, setEditedRate] = useState(comment.rate);
@@ -83,8 +83,8 @@ function SingleComment({ comment, onEditOrDeleteComment }) {
     <>
     <div className="d-flex justify-content-between border p-2 my-1">
       <div>
-        <p>{comment.comment}</p>
-        <small>Valutazione: {comment.rate} </small>
+        <p style={{color:colorText}}>{comment.comment}</p>
+        <small style={{color:colorText}}>Valutazione: {comment.rate} </small>
       </div>
       <div className="d-flex flex-column align-content-center gap-2">
         <Button
