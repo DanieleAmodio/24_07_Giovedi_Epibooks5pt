@@ -1,16 +1,17 @@
+import { Container, Row } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 
-import { Container, Row } from "react-bootstrap";
 
-function AllTheBooks({ filteredBook, theme, colorText}) {
+function AllTheBooks({ filteredBook,colorText,theme}) {
+
   return (
-    <Container style={{background: theme}}>
+    <Container fluid>
       <Row>
         {filteredBook.map((book) => (
           <SingleBook key={book.asin} book={book} colorText={colorText} theme={theme} />
         ))}
-      </Row>
-    </Container>
+        </Row>
+    </Container >
   );
 }
 

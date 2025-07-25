@@ -9,6 +9,9 @@ import scifi from "./books/scifi.json";
 import history from "./books/history.json";
 import { useState } from "react";
 import { contextTheme } from "./context/contextTheme";
+import CommentArea from "./components/CommentArea.jsx";
+import { SelectedProvider } from "./context/selectedContext.jsx";
+import { Col, Container, Row } from "react-bootstrap";
 
 const booksData = {
   Fantasy: fantasy,
@@ -23,6 +26,7 @@ function App() {
   const [filteredBook, setFilteredBook] = useState(booksData[categoria]);
   const [theme, setTheme] = useState("white");
   const [colorText, setColorText] = useState("black");
+  
 
   function toggleTheme() {
     if (theme == "black") {
@@ -63,12 +67,23 @@ function App() {
         />
 
         <Welcome searchValue={searchValue} filteredBook={filteredBook} />
+         <SelectedProvider>
+         <Container style={{background: theme}}>
+      <Row>
+        <Col md={9}>
         <AllTheBooks
           filteredBook={filteredBook}
           toggleTheme={toggleTheme}
           theme={theme}
           colorText={colorText}
         />
+        </Col>
+        <Col ms={3}>
+         <CommentArea colorText={colorText} />
+        </Col>
+        </Row>
+        </Container>
+        </SelectedProvider>
         <Footer />
       </contextTheme.Provider>
     </>
