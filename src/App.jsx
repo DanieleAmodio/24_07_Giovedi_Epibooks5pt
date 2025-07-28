@@ -70,7 +70,7 @@ function App() {
          <SelectedProvider>
          <Container fluid style={{background: theme}}>
       <Row>
-        <Col md={9}>
+        <Col xs={6} sm={8} md={9}>
         <AllTheBooks
           filteredBook={filteredBook}
           toggleTheme={toggleTheme}
@@ -78,7 +78,7 @@ function App() {
           colorText={colorText}
         />
         </Col>
-        <Col ms={3}>
+        <Col xs={6} sm={8} md={3}>
          <CommentArea colorText={colorText} />
         </Col>
         </Row>
