@@ -78,7 +78,7 @@ function App() {
           colorText={colorText}
         />
         </Col>
-        <Col xs={6} sm={8} md={3}>
+        <Col xs={6} sm={4} md={3}>
          <CommentArea colorText={colorText} />
         </Col>
         </Row>
