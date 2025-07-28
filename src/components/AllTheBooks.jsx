@@ -19,13 +19,14 @@ function AllTheBooks({ filteredBook,colorText,theme}) {
         {currentBooks.map((book) => (
           <SingleBook key={book.asin} book={book} colorText={colorText} theme={theme} />
         ))}
-        </Row>
          <Pages
         totalItems={filteredBook.length}
         itemsPerPage={itemsPerPage}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
       />
+        </Row>
+        
     </Container>
   );
 }

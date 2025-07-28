@@ -7,7 +7,7 @@ const Pages = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => {
   if (totalPages === 1) return null; // nasconde la paginazione se c'è solo una pagina
 
   return (
-    <Pagination className="justify-content-center mt-4">
+    <Pagination className="flex-wrap justify-content-center mt-4">
       <Pagination.Prev
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
