@@ -3,7 +3,7 @@ function footer() {
   return (
     <>
       <footer className=" py-3 my-4 border-top bg-dark ">
-        <Container className="d-flex flex-wrap justify-content-between align-items-center">
+        <Container fluid className="d-flex flex-wrap justify-content-between align-items-center">
           <p className="col-md-4 mb-0 text-white">© 2025 Company, Inc</p>
           <a
             href="/"

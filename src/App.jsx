@@ -68,7 +68,7 @@ function App() {
 
         <Welcome searchValue={searchValue} filteredBook={filteredBook} />
          <SelectedProvider>
-         <Container style={{background: theme}}>
+         <Container fluid style={{background: theme}}>
       <Row>
         <Col md={9}>
         <AllTheBooks
